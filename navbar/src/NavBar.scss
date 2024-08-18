@@ -1,0 +1,102 @@
+.Navbar{
+    height: 85px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img{
+        height: 75px;
+        width: 75px;
+        margin-left: 35px;
+    }
+
+    h1{
+        font-size: 21px;
+        margin-top: 21px;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    .cont{
+        display: flex;
+        margin-left: 60%;
+
+        p{
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+
+
+  
+    .logcomp {
+        display: flex;
+        gap: 10px; 
+        margin-left:2%;/* Adjust the gap between buttons */
+    }
+      
+    .signInButton,
+    .signUpButton {
+        width: 100px;
+        height: 35px !important;
+        border-radius: 5px;/* Adjust padding for button size */
+        font-size: 21x; /* Adjust font size */
+        border: 1px solid #ccc; /* Border color */
+        background-color: #007bff; /* Button background color */
+        color: white; /* Text color */
+        cursor: pointer;
+    }
+    .logoutButton{
+        width: 100px;
+        height: 25px !important;
+        border-radius: 5px;/* Adjust padding for button size */
+        font-size: 21x; /* Adjust font size */
+        border: 1px solid #ccc; /* Border color */
+        background-color: #e67e22; /* Button background color */
+        color: white; /* Text color */
+        cursor: pointer;
+    }
+
+    .cart{
+        width: 100px;
+        height: 25px !important;
+        margin-top: 5px;
+        border-radius: 5px;/* Adjust padding for button size */
+        font-size: 21x; /* Adjust font size */
+        border: 1px solid #ccc; /* Border color */
+        background-color: #007bff; /* Button background color */
+        color: white; /* Text color */
+        cursor: pointer;
+    }
+
+
+
+    .signInButton:hover,
+    .signUpButton:hover {
+        background-color: #e0e0e0; /* Hover background color */
+    }
+
+    .user-details{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 100%;
+    } 
+    
+ 
+
+    .div{
+        width: 140px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
