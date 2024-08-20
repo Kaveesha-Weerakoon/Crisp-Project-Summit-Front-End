@@ -36,7 +36,7 @@ const Category = () => {
 
 const Cont = ({ id, name, photoUrl }) => {
   return (
-    <Link to={`/category/${id}`} className="cont">
+    <Link to={`/category/${id}/${name}`} className="cont">
       <img src={photoUrl} alt={name} />
       <h1>{name}</h1>
     </Link>

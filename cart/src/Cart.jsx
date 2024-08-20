@@ -49,6 +49,11 @@ const Cart = () => {
     }
   };
 
+  const calculateTotalPrice = () => {
+    if (!cart || cart.length === 0) return 0;
+    return cart.reduce((total, product) => total + product.price * product.qunatity, 0);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -63,7 +68,7 @@ const Cart = () => {
         <h2>Cart Details</h2>
         {cart ? (
           <div>
-            <h3>Cart ID: {cart.id}</h3>
+            <h3>Cart ID: {cartId}</h3>
             <button className="delete-button" onClick={handleDeleteCart}>Delete Cart</button>
             <h4>Products:</h4>
             {cart && cart.length > 0 ? (
@@ -83,6 +88,8 @@ const Cart = () => {
             ) : (
               <p>No products in this cart.</p>
             )}
+            {/* Display total price */}
+            <h4>Total Price: ${calculateTotalPrice().toFixed(2)}</h4>
           </div>
         ) : (
           <p>Cart not found.</p>

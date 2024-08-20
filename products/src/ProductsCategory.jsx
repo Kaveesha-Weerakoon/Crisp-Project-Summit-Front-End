@@ -6,7 +6,7 @@ import CartModal from './CartModal'; // Import CartModal
 import { useNavigate } from 'react-router-dom';
 
 const ProductsCategory = () => {
-  const { id } = useParams(); // Get the categoryId from the URL
+  const { id ,name} = useParams(); // Get the categoryId from the URL
   const [categoryName, setCategoryName] = useState('');
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -17,6 +17,7 @@ const ProductsCategory = () => {
   const fetchCategoryName = async (categoryId) => {
     try {
       const response = await axios.get(`http://localhost:4000/api/products/category/${categoryId}`);
+      console.log(response.data)
       setCategoryName(response.data.name);
     } catch (error) {
       console.error('Error fetching category name:', error);
@@ -62,7 +63,7 @@ const ProductsCategory = () => {
   return (
     <div className='ProductsCategory'>
       <div className="top">
-        <h2>{categoryName} Products</h2>
+        <h2>{name}</h2>
       </div>
       <div className="bottom">
         {products.length === 0 && <div>No Products</div>}
